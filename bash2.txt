@@ -1,0 +1,17 @@
+cd ~
+mkdir test3
+for i in 4 5 6; do echo -e "row1\nrow2\nrow3\nrow4" > ~/test3/$i; done
+grep 'row2' ~/test3/5
+grep -r 'row' ~/test3
+grep -c 'row' ~/test3/6
+find ~/test3 -name 5
+find ~/test3 -name 5 -delete
+echo "test" > ~/test3/4
+sed -i 's/test/fail/' ~/test3/4
+echo "test" >> ~/test3/4
+ps aux
+kill 666
+ping -c 4 rusau.net
+ping -c 5 rusau.net
+curl -X GET "https://petstore.swagger.io/v2/pet/findByStatus?status=available" -H "accept: application/json"
+curl -X POST "https://petstore.swagger.io/v2/user" -H "Content-Type: application/json" -d "{\"id\":123,\"username\":\"user123\",\"firstName\":\"John\",\"lastName\":\"Doe\",\"email\":\"john.doe@example.com\",\"password\":\"pass123\",\"phone\":\"1234567890\",\"userStatus\":1}"
